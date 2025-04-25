@@ -1,0 +1,367 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMngTour.master.cs" Inherits="travel_temp5_final.AdminMngTour" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Level HTML Template</title>
+                    <!--
+
+Template 2095 Level
+
+http://www.tooplate.com/view/2095-level
+
+-->
+                    <!-- load stylesheets -->
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+                    <!-- Google web font "Open Sans" -->
+                    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+                    <!-- Font Awesome -->
+                    <link rel="stylesheet" href="css/bootstrap.min.css">
+                    <!-- Bootstrap style -->
+                    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+                    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+                    <link rel="stylesheet" type="text/css" href="css/datepicker.css" />
+                    <link rel="stylesheet" href="css/tooplate-style.css">
+                    <!-- Templatemo style -->
+
+                    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+                </head>
+                <body>
+                    <div class="tm-main-content" id="top">
+                        <div class="tm-top-bar-bg">
+                        </div>
+                        <div class="tm-top-bar" id="tm-top-bar">
+                            <!-- Top Navbar -->
+                            <div class="container">
+                                <div class="row">
+                                    <nav class="navbar navbar-expand-lg narbar-light">
+                                        <a class="navbar-brand mr-auto" href="#">
+                                        <img src="img/logo.png" alt="Site logo">Tour </a>
+                                        <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item"><a class="nav-link" href="AdminDashboard.aspx">Dashboard <span class="sr-only">(current)</span></a> </li>
+                                                <li class="nav-item"><a class="nav-link" href="AdminAddCatg.aspx">Add Category</a> </li>
+                                                <li class="nav-item"><a class="nav-link" href="AdminMNGuser.aspx">Manage User</a> </li>
+                                                <li class="nav-item"><a class="nav-link" href="AdminMngTour.aspx">Manage Tour</a> </li>
+                                                <li class="nav-item"><a class="nav-link" href="AdminMngBooking.aspx">Manage Booking</a> </li>
+                                                <li class="nav-item"><a class="nav-link" href="AdminLogin.aspx">Login</a> </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                  <div>  <asp:Label ID="lblAdmin" runat="server" Text="Label"  Font-Bold="True" Font-Italic="True" Font-Size="Medium" ForeColor="#569D88"></asp:Label></div>
+                <br /><br />
+                <div>
+                    <center>
+                        <h2>Travel Packeg&nbsp;
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="35px" ImageUrl="~/images/ref.jpg" OnClick="ImageButton1_Click" Width="31px" ImageAlign="Right" />
+                        </h2>
+                        <br />
+                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label12" runat="server" Text="Image"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:FileUpload ID="fldimg" runat="server" Width="321px" /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label14" runat="server" Text="Category"></asp:Label></td>
+                                <td>
+                                    <asp:DropDownList ID="ddlcat" runat="server" OnSelectedIndexChanged="ddlcat_SelectedIndexChanged"></asp:DropDownList></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblPkgnm" runat="server" Text="Package Name"></asp:Label>
+                                </td>
+
+                                <td>
+                                    <asp:TextBox ID="txtpkgnm" runat="server" Height="29px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label6" runat="server" Text="Start Date"></asp:Label></td>
+                                <td>
+                                    <asp:TextBox ID="txtstrtdt" runat="server" Height="29px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label7" runat="server" Text="End Date"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtenddt" runat="server" Height="29px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label1" runat="server" Text="Duration"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtdurtsn" runat="server" Height="29px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label2" runat="server" Text="Destination(s)"></asp:Label>
+                                </td>
+                                <td>
+
+                                    <asp:TextBox ID="txtdestn" runat="server" Height="89px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label3" runat="server" Text=" Day-wise Itinerary"></asp:Label>
+                                </td>
+                                <td>
+
+                                    <asp:TextBox ID="txtdwistnti" runat="server" Height="165px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label4" runat="server" Text="Start Location"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:DropDownList ID="ddlstrtloctn" runat="server">
+                                        <asp:ListItem>--Start Location--</asp:ListItem>
+                                        <asp:ListItem>Mumbai</asp:ListItem>
+                                        <asp:ListItem>Gujarat</asp:ListItem>
+                                        <asp:ListItem>Delhi</asp:ListItem>
+                                    </asp:DropDownList>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label5" runat="server" Text="End Location"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:DropDownList ID="ddlendloctn" runat="server">
+                                        <asp:ListItem>--End Location--</asp:ListItem>
+                                        <asp:ListItem>Manali</asp:ListItem>
+                                        <asp:ListItem> Kerala</asp:ListItem>
+                                        <asp:ListItem>Goa</asp:ListItem>
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label8" runat="server" Text="Travel Mode"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:DropDownList ID="ddltrvlmod" runat="server">
+                                        <asp:ListItem>--Travel Mode--</asp:ListItem>
+                                        <asp:ListItem>Flight</asp:ListItem>
+                                        <asp:ListItem>Bus</asp:ListItem>
+                                        <asp:ListItem>Cab</asp:ListItem>
+                                        <asp:ListItem>Train</asp:ListItem>
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label9" runat="server" Text="Local Transfer Included"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:RadioButtonList ID="rdbllclinc" runat="server" Width="98px">
+                                        <asp:ListItem>Yes</asp:ListItem>
+                                        <asp:ListItem>No</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label10" runat="server" Text="Service Inclusions"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:CheckBoxList ID="chblistservis" runat="server" AutoPostBack="true" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged" Width="229px">
+                                        <asp:ListItem>Meals</asp:ListItem>
+                                        <asp:ListItem>Guided Sightseeing</asp:ListItem>
+                                        <asp:ListItem>Entry Fees </asp:ListItem>
+                                    </asp:CheckBoxList>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label11" runat="server" Text="Price"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtprice" runat="server" Height="29px" Width="258px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <br />
+                        <asp:Button ID="btnadd" runat="server"  BackColor="#579F8A" Text="Add Package" Height="46px" Width="230px" OnClick="btnadd_Click" />
+                        <br />
+                        <br />
+                        <div style="width: 100%; overflow-x: auto;">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="gridViewStyle" OnRowCommand="GridView1_RowCommand" CellPadding="7" CellSpacing="3" ForeColor="#333333" GridLines="None" HorizontalAlign="Center">
+                                <AlternatingRowStyle BackColor="White" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Id">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label13" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Image">
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" Height="80" Width="80" ImageUrl='<%# Eval("Image") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Category">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label29" runat="server" Text='<%# Eval("Category") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Package_Name">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label15" runat="server" Text='<%# Eval("Package_Name") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Start_Date">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label16" runat="server" Text='<%# Eval("Start_Date") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="End_Date">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label17" runat="server" Text='<%# Eval("End_Date") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Duration">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label18" runat="server" Text='<%# Eval("Duration") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Destination">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label19" runat="server" Text='<%# Eval("Destination") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Day_wise_Itinerary">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label20" runat="server" Text='<%# Eval("Day_wise_Itinerary") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Start_Location">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label21" runat="server" Text='<%# Eval("Start_Location") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="End_Location">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label22" runat="server" Text='<%# Eval("End_Location") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Travel_Mode">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label23" runat="server" Text='<%# Eval("Travel_Mode") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Local_Transfer_Included">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label24" runat="server" Text='<%# Eval("Local_Transfer_Included") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Service_Inclusions1">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label25" runat="server" Text='<%# Eval("Service_Inclusions1") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Service_Inclusions2">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label26" runat="server" Text='<%# Eval("Service_Inclusions2") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Service_Inclusions3">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label27" runat="server" Text='<%# Eval("Service_Inclusions3") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Price">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label28" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Edit">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_edt" ForeColor="Red">Edit</asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Delete">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_delet" ForeColor="Red">Delete</asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                                <EditRowStyle BackColor="#7C6F57" />
+                                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#E3EAEB" />
+                                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                                <SortedDescendingHeaderStyle BackColor="#15524A" />
+                            </asp:GridView>
+                        </div>
+                    </center>
+                </div>
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2025 All rights reserved.
+                    </p>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
